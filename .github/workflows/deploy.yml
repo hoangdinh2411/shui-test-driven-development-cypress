@@ -3,7 +3,7 @@ run-name: ${{github.actor}} is learning CI CD
 on:
   push:
     branches:
-      - dev
+      - main
   pull_request_review:
     types: [submitted]
 
