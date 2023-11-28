@@ -1,0 +1,35 @@
+name: 'deploy react app that using GraphQL'
+run-name: ${{github.actor}} is learning CI CD
+on:
+  push:
+    branches:
+      - dev
+  pull_request_review:
+    types: [submitted]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install modules
+        run: npm install
+      - name: Testing drive development
+        run: npm run open-test
+      - name: Build dist
+        run: npm run build-dev
+      - name: Setup pages
+        uses: actions/configure-pages@v3
+      - name: Upload dist folder
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: './dist'
+      - name: Deploy to Github Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
