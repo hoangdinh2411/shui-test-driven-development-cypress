@@ -13,6 +13,16 @@ permissions:
   id-token: write
 
 jobs:
+  cypress-run:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: run cypress to testing driven development
+        uses: cypress-io/github-action@v6
+        with:
+          build: npm run build
+          start: npm start
+          browser: chrome
   build:
     runs-on: ubuntu-latest
 
