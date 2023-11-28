@@ -21,16 +21,8 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           build: npm run build
-          start: npm start
+          start: npm run open-test
           browser: chrome
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-      - name: Install modules
-        run: npm install
-
       - name: Build dist
         run: npm run build-dev
       - name: Setup pages
