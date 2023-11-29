@@ -7,7 +7,7 @@ import Post from './pages/Post.jsx';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <h1>Message</h1>,
+    element: <Messages />,
   },
   {
     path: '/post',
