@@ -1,6 +1,6 @@
 describe('template spec', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:5173');
+    cy.visit('http://localhost:5173/shui-test-driven-development-cypress');
     cy.get('.btn--new').first().click();
     cy.get('#post-form').should('be.visible');
   });

@@ -17,7 +17,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    base: '/shui-test-driven-development-cypress',
+    basename: '/shui-test-driven-development-cypress',
   }
 );
 ReactDOM.createRoot(document.getElementById('root')).render(
