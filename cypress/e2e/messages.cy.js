@@ -1,6 +1,6 @@
 describe('template spec', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:5173/');
+    cy.visit('http://localhost:5173/shui-test-driven-development-cypress');
   });
 
   it('display all messages that are stored in local storage', () => {
