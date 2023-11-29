@@ -6,7 +6,6 @@ import Messages from './pages/Messages.jsx';
 import Post from './pages/Post.jsx';
 const router = createBrowserRouter([
   {
-    index: true,
     path: '/',
     element: <Messages />,
   },
