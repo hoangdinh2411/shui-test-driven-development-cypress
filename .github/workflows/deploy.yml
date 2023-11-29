@@ -23,8 +23,8 @@ jobs:
           build: npm run build
           start: npm run dev
           browser: chrome
-      - name: Build dist
-        run: npm run build-dev
+      # - name: Build dist
+      #   run: npm run build
       - name: Setup pages
         uses: actions/configure-pages@v3
       - name: Upload dist folder
