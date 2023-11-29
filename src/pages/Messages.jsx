@@ -17,6 +17,7 @@ export default function Messages() {
     ];
     setMessages(messages);
   }, []);
+  console.log(messages);
   return (
     <>
       <button className='btn--new' onClick={() => navigate('/post')}>
