@@ -21,7 +21,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           build: npm run build
-          start: npm run open-test
+          start: npm run dev
           browser: chrome
       - name: Build dist
         run: npm run build-dev
