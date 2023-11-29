@@ -23,8 +23,8 @@ jobs:
           build: npm run build
           start: npm run dev
           browser: chrome
-     
-   build:
+
+  build:
     needs: cypress-run
     runs-on: ubuntu-latest
     steps:
